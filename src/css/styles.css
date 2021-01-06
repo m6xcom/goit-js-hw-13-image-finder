@@ -1,0 +1,41 @@
+body {
+  background-color: #444444;
+  color: white;
+}
+
+.search-form {
+  margin-left: 40%;
+  width: 20%;
+}
+
+.gallery {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery > li {
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 700px;
+}
+
+.stats-item {
+  background-color: #8470ff;
+}
+
+.load-more {
+  margin-left: 45%;
+  width: 10%;
+  height: auto;
+}
+.hidden-button {
+  display: none;
+}

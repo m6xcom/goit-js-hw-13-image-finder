@@ -24,7 +24,12 @@ body {
   border: 1px solid white;
   border-radius: 5px;
   overflow: hidden;
-  height: 700px;
+  height: 500px;
+}
+
+.photo-card > img {
+  width: 420px;
+  height: auto;
 }
 
 .stats-item {

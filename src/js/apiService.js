@@ -16,7 +16,6 @@ export default {
     return (this.query = val);
   },
   async getImages(val = this.query, place) {
-    console.log(this.query);
     let key = "19787532-99c32fb0a864719ee4b9d7cb0";
     let params = {
       image_type: this.image_type,
@@ -26,7 +25,8 @@ export default {
     };
     const response = await searchImages(key, val, params);
     const data = response.hits;
-    console.dir(data);
+    console.log(data);
+    const loadMore = data.length;
     const markup = template(data);
     place.insertAdjacentHTML("beforeend", markup);
     setTimeout(() => {
@@ -34,7 +34,8 @@ export default {
         top: document.documentElement.scrollHeight,
         behavior: "smooth",
       });
-    }, 1000);
+    }, 1500);
+    return loadMore;
   },
   setPage() {
     this.page += 1;

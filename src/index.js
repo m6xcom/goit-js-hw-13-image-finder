@@ -9,6 +9,7 @@ const {
   noMatchesError,
 } = notification;
 import fetchImages from "./js/apiService";
+import showImage from "./js/gallery";
 import { data } from "autoprefixer";
 
 const toggleButton = (length, newFetch) => {
@@ -47,4 +48,10 @@ loadMoreButton.addEventListener("click", () => {
   fetchImages
     .getImages(undefined, gallery)
     .then((data) => toggleButton(data, false));
+});
+
+gallery.addEventListener("click", (e) => {
+  if (e.target.nodeName === "IMG") {
+    showImage.clickImage(e.target.dataset.largeimage, false);
+  }
 });

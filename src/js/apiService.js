@@ -25,7 +25,6 @@ export default {
     };
     const response = await searchImages(key, val, params);
     const data = response.hits;
-    console.log(data);
     const loadMore = data.length;
     const markup = template(data);
     place.insertAdjacentHTML("beforeend", markup);

@@ -7,7 +7,7 @@ export default {
   orientation: "horizontal",
   query: "",
   page: 1,
-  per_page: 12,
+  per_page: 3,
 
   get queryValue() {
     return this.query;
@@ -28,12 +28,6 @@ export default {
     const loadMore = data.length;
     const markup = template(data);
     place.insertAdjacentHTML("beforeend", markup);
-    setTimeout(() => {
-      window.scrollTo({
-        top: document.documentElement.scrollHeight,
-        behavior: "smooth",
-      });
-    }, 1500);
     return loadMore;
   },
   setPage() {

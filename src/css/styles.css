@@ -44,6 +44,9 @@ body {
 .hidden-button {
   display: none;
 }
+.hidden {
+  display: none;
+}
 
 .basicLightbox {
   position: fixed;
@@ -95,4 +98,9 @@ body {
 
 .basicLightbox--visible .basicLightbox__placeholder {
   transform: scale(1);
+}
+
+#infinite-scroll-trigger {
+  width: 100%;
+  height: 10px;
 }

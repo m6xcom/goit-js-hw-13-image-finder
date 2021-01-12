@@ -10,7 +10,7 @@ function successFetch() {
     text: "Success!",
     closer: false,
     sticker: false,
-    delay: 1500,
+    delay: 800,
   });
 }
 
@@ -19,7 +19,7 @@ function insufficientFetch(length) {
     text: `Success! ${length} images were found`,
     closer: false,
     sticker: false,
-    delay: 1500,
+    delay: 800,
   });
 }
 
@@ -28,7 +28,7 @@ function oneImageFetch() {
     text: `Success! Only 1 image was found`,
     closer: false,
     sticker: false,
-    delay: 1500,
+    delay: 800,
   });
 }
 
@@ -37,7 +37,16 @@ function noMatchesError() {
     text: "No matches found! ",
     closer: false,
     sticker: false,
-    delay: 1500,
+    delay: 800,
+  });
+}
+
+function noMoreImages() {
+  error({
+    text: "No more images! ",
+    closer: false,
+    sticker: false,
+    delay: 800,
   });
 }
 export default {
@@ -45,4 +54,5 @@ export default {
   insufficientFetch,
   oneImageFetch,
   noMatchesError,
+  noMoreImages,
 };
